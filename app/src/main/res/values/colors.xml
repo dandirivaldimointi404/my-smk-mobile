@@ -3,5 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lavender">#8692f7</color>
+    <color name="primaryColor">#5656FF</color>
+    <color name="secondaryColor">#E6E6E6</color>
+    <color name="barColor">#6C63FF</color>
+    <color name="biru">#9292FD</color>
 
 </resources>

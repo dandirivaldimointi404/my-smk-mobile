@@ -1,4 +1,4 @@
-package com.example.my_smk_app;
+package com.example.my_smk_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+import com.example.my_smk_app.R;
 import com.example.my_smk_app.databinding.ActivityMainBinding;
 import com.example.my_smk_app.Fragment.AbsensiFragment;
 import com.example.my_smk_app.Fragment.EvaluasiFragment;
