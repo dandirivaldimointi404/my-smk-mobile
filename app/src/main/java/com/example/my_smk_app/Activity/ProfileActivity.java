@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.my_smk_app.Models.UserModel;
 import com.example.my_smk_app.R;
 import com.example.my_smk_app.SessionManager;
 
@@ -18,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     TextView tv_username;
     ImageView backButton;
-    Button btn_logout;
+    Button btn_logout, btn_edit;
     SessionManager sessionManager;
 
     @Override
@@ -29,15 +30,25 @@ public class ProfileActivity extends AppCompatActivity {
         tv_username = findViewById(R.id.tv_username);
         backButton = findViewById(R.id.backButton);
         btn_logout = findViewById(R.id.btn_logout);
+        btn_edit = findViewById(R.id.btn_edit);
         sessionManager = new SessionManager(this);
 
-        String username = sessionManager.getUsername();
-        tv_username.setText(username != null ? username : "Unknown User");
+        String updatedUsername = sessionManager.getUsername();
+        tv_username.setText(updatedUsername != null ? updatedUsername : "Unknown User");
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, EditProfileActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -65,7 +76,6 @@ public class ProfileActivity extends AppCompatActivity {
         messageTextView.setText("Apakah Anda yakin ingin logout?");
 
         AlertDialog alertDialog = builder.create();
-
 
         positiveButton.setOnClickListener(new View.OnClickListener() {
             @Override

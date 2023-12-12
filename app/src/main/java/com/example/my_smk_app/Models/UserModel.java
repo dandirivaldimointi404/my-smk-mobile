@@ -13,6 +13,10 @@ public class UserModel {
     @SerializedName("username")
     private String username;
 
+    @SerializedName("password")
+    private String password;
+
+
     @SerializedName("level")
     private String level;
 
@@ -28,10 +32,11 @@ public class UserModel {
     @SerializedName("updated_at")
     private String updatedAt;
 
-    public UserModel(int id, String name, String username, String level, String avatar, String emailVerifiedAt, String createdAt, String updatedAt) {
+    public UserModel(int id, String name, String username,String password, String level, String avatar, String emailVerifiedAt, String createdAt) {
         this.id = id;
         this.name = name;
         this.username = username;
+        this.password = password;
         this.level = level;
         this.avatar = avatar;
         this.emailVerifiedAt = emailVerifiedAt;
@@ -69,6 +74,46 @@ public class UserModel {
 
     public String getUpdatedAt() {
         return updatedAt;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public void setEmailVerifiedAt(String emailVerifiedAt) {
+        this.emailVerifiedAt = emailVerifiedAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 
