@@ -8,12 +8,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.example.my_smk_app.databinding.ActivityMainBinding;
-import com.example.my_smk_app.fragment.AbsensiFragment;
-import com.example.my_smk_app.fragment.EvaluasiFragment;
-import com.example.my_smk_app.fragment.HomeFragment;
-import com.example.my_smk_app.fragment.MateriFragment;
-import com.example.my_smk_app.fragment.TugasFragment;
-import com.google.android.material.datepicker.MaterialCalendar;
+import com.example.my_smk_app.Fragment.AbsensiFragment;
+import com.example.my_smk_app.Fragment.EvaluasiFragment;
+import com.example.my_smk_app.Fragment.HomeFragment;
+import com.example.my_smk_app.Fragment.MateriFragment;
+import com.example.my_smk_app.Fragment.TugasFragment;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;

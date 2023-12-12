@@ -1,4 +1,4 @@
-package com.example.my_smk_app.fragment;
+package com.example.my_smk_app.Fragment;
 
 import android.os.Bundle;
 
